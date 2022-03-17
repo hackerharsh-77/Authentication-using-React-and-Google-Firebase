@@ -5,18 +5,19 @@ import { useEffect, useState } from "react";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-    apiKey: process.env.REACT_APP_FIREBASE_API_KEY ,
-    authDomain: process.env.REACT_APP_FIREBASE_AUTH_DOMAIN ,
-    projectId: process.env.REACT_APP_FIREBASE_PROJECT_ID ,
-    storageBucket: process.env.REACT_APP_FIREBASE_STORAGE_BUCKET ,
-    messagingSenderId: process.env.REACT_APP_FIREBASE_MESSAGING_SENDER_ID ,
-    appId: process.env.REACT_APP_FIREBASE_APP_ID
-};
+    apiKey: "AIzaSyCMCQG9upg7vvXG0kP3LkaJVWWYVIhZY68",
+    authDomain: "sih-rk762.firebaseapp.com",
+    projectId: "sih-rk762",
+    storageBucket: "sih-rk762.appspot.com",
+    messagingSenderId: "1006591018671",
+    appId: "1:1006591018671:web:d968d74987cc88cce4365a",
+    measurementId: "G-VFSFSQNMNQ"
+  };
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
 const auth = getAuth();
-
+    
 export function signup(email,password){
     return createUserWithEmailAndPassword(auth,email,password); //registers a user with email id and password
 }
